@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      JAP Careers
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+      #banner{
+        height:360px;
+        width: 100%;
+        object-fit:cover;
+        
+      }
+      body{
+        background-color: black;
+      } 
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-4 mb-4" style="color:white;">
+      JAP Careers
+    </h1>
+    <img class="img-fluid" id="banner" src="https://jaswebsite--jagathishvs02.repl.co/static/banner.jpg">
+    <h2 class="text-center mt-4 mb-4" style="color:white;">
+      About JAP
+    </h2>
+   <p class="lead" style="color:white;">
+      JAP is a pioneering Japanese technology company          founded in 2005, specializing in robotics,               artificial intelligence, and advanced electronics. Their humanoid robots have gained global recognition for their human-like movements and versatility, finding applications in healthcare, customer service, entertainment, and education. Beyond robotics, JAP is a leader in AI research, contributing to autonomous vehicles, language translation, and healthcare diagnostics. The company distinguishes itself through its strong commitment to ethical and sustainable innovation, ensuring that its technological advancements are responsible and environmentally conscious. With a diverse, global team of experts, JAP continues to shape the future of technology, making the world smarter, more connected, and more sustainable.
+    
+            
+   </p>
+  <h2 class="text-center mt-2 mb-4" style="color:white;">Open Positions</h2>
+      <div> 
+        {% for job in jobs %}
+        {% include 'jobitem.html' %}   
+        {% endfor %}
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary btn-lg">Contact Us</button>
+        <p style="color:white;" class="mt-4">Copyright 2023, JAP</p>
+      </div>
+    </div>
+  </body>
+</html>
