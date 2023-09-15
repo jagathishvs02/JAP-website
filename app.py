@@ -10,7 +10,7 @@ JOBS =[
   },
    {
     'id': 2,
-    'title':'FrontEnd Developer',
+    'title':'Frontend Developer',
     'location':'Bangalore,India',
     'salary':'Rs.10,00,000'
   },

@@ -12,22 +12,26 @@
         height:360px;
         width: 100%;
         object-fit:cover;
-        
+        margin-bottom: 16px;
+      }
+      #contact{
+        padding-top: 50px;
       }
       body{
         background-color: black;
-      } 
+      }
     </style>
   </head>
   <body>
+    {% include 'nav.html' %}
+    <img class="img-fluid" id="banner" src="https://jaswebsite--jagathishvs02.repl.co/static/banner.jpg">
     <div class="container">
       <h1 class="text-center mt-4 mb-4" style="color:white;">
       JAP Careers
     </h1>
-    <img class="img-fluid" id="banner" src="https://jaswebsite--jagathishvs02.repl.co/static/banner.jpg">
-    <h2 class="text-center mt-4 mb-4" style="color:white;">
+    <!-- <h2 class="text-center mt-4 mb-4" style="color:white;">
       About JAP
-    </h2>
+    </h2> -->
    <p class="lead" style="color:white;">
       JAP is a pioneering Japanese technology company          founded in 2005, specializing in robotics,               artificial intelligence, and advanced electronics. Their humanoid robots have gained global recognition for their human-like movements and versatility, finding applications in healthcare, customer service, entertainment, and education. Beyond robotics, JAP is a leader in AI research, contributing to autonomous vehicles, language translation, and healthcare diagnostics. The company distinguishes itself through its strong commitment to ethical and sustainable innovation, ensuring that its technological advancements are responsible and environmentally conscious. With a diverse, global team of experts, JAP continues to shape the future of technology, making the world smarter, more connected, and more sustainable.
     
@@ -39,10 +43,11 @@
         {% include 'jobitem.html' %}   
         {% endfor %}
       </div>
-      <div class="text-center">
-        <button class="btn btn-primary btn-lg">Contact Us</button>
-        <p style="color:white;" class="mt-4">Copyright 2023, JAP</p>
+      <div class="text-center" id="contact">
+        <a href="mailto:jagathishvs.20@gmail.com?subject=Question%20about%20Job%20Openings&body=Name%3A%20%3Cyour%20name%3E%0D%0AQuestion%3A%20%3CType%20Your%20Question%20here%3E%0D%0A" class="btn btn-primary btn-lg">Contact Us</a>
+        <!-- <p style="color:white;" class="mt-4">Copyright 2023, JAP</p> -->
       </div>
     </div>
+    {% include'footer.html' %}
   </body>
 </html>
