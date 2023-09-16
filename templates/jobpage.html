@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      {{job.title}} - JAP Careers
+    </title>
+    {% include'bootstrap.html' %}
+    <style>
+        body{
+        background-color: black;
+      }
+      #page{
+        color: white;
+      }
+    </style>
+  </head>
+    <body>
+        {% include 'nav.html' %}
+
+        <div class="container" id="page">
+            <h1 class="text-center mt-4 mb-4" style="color:white;">
+            JAP Careers
+          </h1>
+            <h3>{{ job.title }}</h3>
+            <p class="lead">{{job.location}}</p>
+            <h4>Responsiblities</h4>
+            <ul>
+                {% for line in job.responsibilities.split("\n") %}
+                    <li>{{line}}</li>
+                {% endfor %}
+            </ul>
+            <h4>Reqirments</h4>
+            <ol>
+                {% for line in job.requirements.split("\n") %}
+                    <li>{{line}}</li>
+                {% endfor %}
+            </ol>
+            <h4>Salary</h4>
+            <p>{{job.currency}}{{job.salary}}</p>
+        </div>
+
+        {% include'footer.html' %}
+
+    </body>
+</html>
